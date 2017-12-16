@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Поезда Беларуси</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_call">Звонок другу</string>
+    <string name="action_cheat">50/50</string>
+    <string name="number_of_choices">Кол-во вариантов ответа</string>
+    <string name="number_of_choices_description">Отображать 2, 4, 6 или 8 вариантов ответа</string>
+    <string name="results">%1$d guesses, %2$.02f%% correct</string>
+    <string name="question">Вопрос %1$d из %2$d</string>
+    <string name="title_activity_settings">Настройки</string>
+
+    <string name="permission_explanation">Ну очень надо</string>
+    <string name="ok">Ок</string>
+
+    <string name="teplovoz">2T10M</string>
+    <string name="bkg1">БКГ1</string>
+    <string name="chme3">ЧМЭ3</string>
+    <string name="dr1p">ДР1П</string>
+    <string name="drb1">ДРБ1</string>
+    <string name="epg">ЭПр</string>
+    <string name="epr">ЭПг</string>
+    <string name="er9t">ЭР9T</string>
+    <string name="ten60">ТЭП60</string>
+    <string name="vl80">ВЛ80</string>
+
+    <string name="title_activity_result">Результаты</string>
+    <string name="result_message">Ваш реузльтат</string>
+    <string name="high_scores_label">Результаты:</string>
+    <string name="save_results_btn">Сохранить</string>
+    <string name="input_name">Введите имя</string>
+</resources>

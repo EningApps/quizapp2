@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="guesses_list">
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="presidents">
+        <item>@string/teplovoz</item>
+        <item>@string/bkg1</item>
+        <item>@string/chme3</item>
+        <item>@string/dr1p</item>
+        <item>@string/drb1</item>
+        <item>@string/epg</item>
+        <item>@string/epr</item>
+        <item>@string/er9t</item>
+        <item>@string/ten60</item>
+        <item>@string/vl80</item>
+    </string-array>
+
+    <string-array name="presidents_photos">
+        <item>2t10m.jpg</item>
+        <item>bkg1.jpg</item>
+        <item>chme3.jpg</item>
+        <item>dr1p.jpg</item>
+        <item>drb1.jpg</item>
+        <item>epg.jpg</item>
+        <item>epr.jpg</item>
+        <item>er9t.jpg</item>
+        <item>ten60.jpg</item>
+        <item>vl80.jpg</item>
+    </string-array>
+
+    <string-array name="answers">
+        <item>@string/teplovoz</item>
+        <item>@string/bkg1</item>
+        <item>@string/chme3</item>
+        <item>@string/dr1p</item>
+        <item>@string/drb1</item>
+        <item>@string/epg</item>
+        <item>@string/epr</item>
+        <item>@string/er9t</item>
+        <item>@string/ten60</item>
+        <item>@string/vl80</item>
+    </string-array>
+
+</resources>
