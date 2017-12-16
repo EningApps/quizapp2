@@ -45,7 +45,7 @@ public class MainActivityFragment extends Fragment {
     private ArrayList<Button> guessButtons;
 
     private ArrayList<String> answers;
-    private  String correctAnswer;
+    private String correctAnswer;
 
     private String guess;
 
@@ -127,14 +127,23 @@ public class MainActivityFragment extends Fragment {
                 guessButtons.add(button);
             }
         }
+
+        boolean hasRightAnswer = false;
         int answerIndex = 0;
-        for (final Button guessButton : guessButtons) {
+        for (int j = 0; j < guessButtons.size(); j++) {
+            Button guessButton = guessButtons.get(j);
             if (answerIndex > answers.size() - 1) {
                 guessButton.setVisibility(View.GONE);
                 answerIndex++;
                 continue;
             }
-            guessButton.setText(answers.get(answerIndex));
+            String buttonText=answers.get(answerIndex);
+            if(buttonText.equals(correctAnswer))
+                hasRightAnswer=true;
+            if (!hasRightAnswer && j == guessButtons.size() - 1) {
+                guessButton.setText(correctAnswer);
+            } else
+                guessButton.setText(buttonText);
             if (guess == null) {
                 guessButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -148,8 +157,7 @@ public class MainActivityFragment extends Fragment {
 
                         if (userGuess.equals(correctAnswer)) {
                             buttonBackground.setColorFilter(getResources().getColor(R.color.correctAnswer), PorterDuff.Mode.MULTIPLY);
-                        }
-                        else {
+                        } else {
                             buttonBackground.setColorFilter(getResources().getColor(R.color.incorrectAnswer), PorterDuff.Mode.MULTIPLY);
                         }
 
@@ -164,8 +172,7 @@ public class MainActivityFragment extends Fragment {
                         listener.nextQuestion();
                     }
                 });
-            }
-            else {
+            } else {
                 guessButton.setClickable(false);
                 if (answers.get(answerIndex).equals(guess)) {
                     Drawable buttonBackground = guessButton.getBackground();
@@ -176,13 +183,16 @@ public class MainActivityFragment extends Fragment {
                     buttonBackground.setColorFilter(getResources().getColor(R.color.correctAnswer), PorterDuff.Mode.MULTIPLY);
                 }
             }
+           // Collections.shuffle(guessButtons);
             answerIndex++;
         }
+
         return view;
     }
 
     public interface OnFragmentInteractionListener {
         void registerGuess(Boolean isCorrect);
+
         void nextQuestion();
     }
 
